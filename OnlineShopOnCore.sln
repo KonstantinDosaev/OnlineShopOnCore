@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{60918484-6817-46E6-916C-4E80F3E7EB05}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShopOnCore.IdentityServer", "OnlineShopOnCore.IdentityServer\OnlineShopOnCore.IdentityServer.csproj", "{591A251B-1029-485B-B5B1-C61C0AE6C7C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{591A251B-1029-485B-B5B1-C61C0AE6C7C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{591A251B-1029-485B-B5B1-C61C0AE6C7C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{591A251B-1029-485B-B5B1-C61C0AE6C7C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{591A251B-1029-485B-B5B1-C61C0AE6C7C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{591A251B-1029-485B-B5B1-C61C0AE6C7C7} = {60918484-6817-46E6-916C-4E80F3E7EB05}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5914F358-C124-4322-BD10-5671FFE9D4B2}
+	EndGlobalSection
+EndGlobal
