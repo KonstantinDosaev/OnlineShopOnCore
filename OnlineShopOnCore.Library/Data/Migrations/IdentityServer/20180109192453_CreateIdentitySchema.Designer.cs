@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace OnlineShopOnCore.Library.Data.Migrations.IdentityServer
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(UsersDbContext))]
     [Migration("20180109192453_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {

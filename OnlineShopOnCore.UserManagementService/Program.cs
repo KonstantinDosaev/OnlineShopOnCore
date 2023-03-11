@@ -1,7 +1,30 @@
+
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using OnlineShopOnCore.Library.Data;
+using OnlineShopOnCore.Library.UserManagement.Models;
+
+
+
+
+
+
+
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("UsersConnection")));
+
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 // Add services to the container.
 builder.Services.AddControllers();
+
+
 
 var app = builder.Build();
 

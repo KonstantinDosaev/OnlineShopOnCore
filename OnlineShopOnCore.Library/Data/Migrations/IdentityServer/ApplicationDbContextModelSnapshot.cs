@@ -12,7 +12,7 @@ using OnlineShopOnCore.Library.Data;
 
 namespace OnlineShopOnCore.Library.Data.Migrations.IdentityServer
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(UsersDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
