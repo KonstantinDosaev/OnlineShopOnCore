@@ -37,4 +37,12 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineShopOnCore.Library\OnlineShopOnCore.Library.csproj" />
+  </ItemGroup>
 </Project>

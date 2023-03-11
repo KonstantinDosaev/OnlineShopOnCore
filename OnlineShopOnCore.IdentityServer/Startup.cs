@@ -14,8 +14,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using OnlineShopOnCore.IdentityServer.Data;
-using OnlineShopOnCore.IdentityServer.Models;
+using OnlineShopOnCore.Library.Data;
+using OnlineShopOnCore.Library.UserManagement.Models;
 
 namespace OnlineShopOnCore.IdentityServer
 {

@@ -13,10 +13,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using OnlineShopOnCore.IdentityServer.Models;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using OnlineShopOnCore.Library.UserManagement.Models;
 
 namespace IdentityServerHost.Quickstart.UI
 {

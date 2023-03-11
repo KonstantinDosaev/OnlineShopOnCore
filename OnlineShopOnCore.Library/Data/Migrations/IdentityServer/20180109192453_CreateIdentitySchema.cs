@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
-using System;
 
-namespace OnlineShopOnCore.IdentityServer.Data.Migrations
+namespace OnlineShopOnCore.Library.Data.Migrations.IdentityServer
 {
     public partial class CreateIdentitySchema : Migration
     {

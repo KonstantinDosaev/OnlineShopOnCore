@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using OnlineShopOnCore.IdentityServer.Models;
+using OnlineShopOnCore.Library.UserManagement.Models;
 
-namespace OnlineShopOnCore.IdentityServer.Data
+namespace OnlineShopOnCore.Library.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
