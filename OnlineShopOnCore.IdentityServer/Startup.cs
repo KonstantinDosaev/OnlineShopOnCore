@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OnlineShopOnCore.Library.Constants;
 using OnlineShopOnCore.Library.Data;
 using OnlineShopOnCore.Library.UserManagement.Models;
 
@@ -35,10 +36,10 @@ namespace OnlineShopOnCore.IdentityServer
             services.AddControllersWithViews();
 
             var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
-            var identityConnectionString = Configuration.GetConnectionString("IdentityConnection");
+            var identityConnectionString = Configuration.GetConnectionString(ConnectionNames.IdentityServerConnection);
 
             services.AddDbContext<UsersDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("UsersConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString(ConnectionNames.UsersConnection)));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<UsersDbContext>()

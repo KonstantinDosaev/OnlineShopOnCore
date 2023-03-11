@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OnlineShopOnCore.Library.Constants;
 using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
@@ -49,7 +50,7 @@ namespace OnlineShopOnCore.IdentityServer
                 {
                     Log.Information("Seeding database...");
                     var config = host.Services.GetRequiredService<IConfiguration>();
-                    var connectionString = config.GetConnectionString("UsersConnection");
+                    var connectionString = config.GetConnectionString(ConnectionNames.UsersConnection);
                     SeedData.EnsureSeedData(connectionString);
                     Log.Information("Done seeding database.");
                     return 0;

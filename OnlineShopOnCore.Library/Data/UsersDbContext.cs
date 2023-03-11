@@ -4,9 +4,9 @@ using OnlineShopOnCore.Library.UserManagement.Models;
 
 namespace OnlineShopOnCore.Library.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class UsersDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public UsersDbContext(DbContextOptions<UsersDbContext> options)
             : base(options)
         {
         }
