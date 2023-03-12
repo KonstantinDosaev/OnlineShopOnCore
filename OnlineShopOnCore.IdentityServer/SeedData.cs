@@ -10,6 +10,7 @@ using Serilog;
 using System;
 using System.Linq;
 using System.Security.Claims;
+using OnlineShopOnCore.Library.Common.Models;
 using OnlineShopOnCore.Library.Data;
 using OnlineShopOnCore.Library.UserManagement.Models;
 
@@ -36,70 +37,85 @@ namespace OnlineShopOnCore.IdentityServer
                     context.Database.Migrate();
 
                     var userMgr = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-                    var alice = userMgr.FindByNameAsync("alice").Result;
-                    if (alice == null)
+                    var konstantin = userMgr.FindByNameAsync("konstantin").Result;
+                    if (konstantin == null)
                     {
-                        alice = new ApplicationUser
+                        konstantin = new ApplicationUser
                         {
-                            UserName = "alice",
-                            Email = "AliceSmith@email.com",
+                            UserName = "konstantin",
+                            FirstName = "Konstantin",
+                            LastName = "Dosaev",
+                            Email = "dk@email.com",
                             EmailConfirmed = true,
+                            DefaultAddress = new Address()
+                            {
+                                City = "Vl",
+                                Country = "Russia",
+                                PostalCode = "00-001",
+                                AddressLine1 = "Glinki 21",
+                                AddressLine2 = "34"
+                            },
+                            DeliveryAddress = new Address()
+                            {
+                                City = "Vl",
+                                Country = "Russia",
+                                PostalCode = "30-001",
+                                AddressLine1 = "Pescareva 45"
+                            },
                         };
-                        var result = userMgr.CreateAsync(alice, "Pass123$").Result;
+                        var result = userMgr.CreateAsync(konstantin, "Pass_123").Result;
                         if (!result.Succeeded)
                         {
                             throw new Exception(result.Errors.First().Description);
                         }
 
-                        result = userMgr.AddClaimsAsync(alice, new Claim[]{
-                            new Claim(JwtClaimTypes.Name, "Alice Smith"),
-                            new Claim(JwtClaimTypes.GivenName, "Alice"),
-                            new Claim(JwtClaimTypes.FamilyName, "Smith"),
-                            new Claim(JwtClaimTypes.WebSite, "http://alice.com"),
+                        result = userMgr.AddClaimsAsync(konstantin, new Claim[]{
+                            new Claim(JwtClaimTypes.Name, "Konstantin Dosaev"),
+                            new Claim(JwtClaimTypes.GivenName, "Konstantin"),
+                            new Claim(JwtClaimTypes.FamilyName, "Dosaev"),
+                            new Claim(JwtClaimTypes.WebSite, "https://https://github.com/KonstantinDosaev/"),
                         }).Result;
                         if (!result.Succeeded)
                         {
                             throw new Exception(result.Errors.First().Description);
                         }
-                        Log.Debug("alice created");
+                        Log.Debug("Konstantin has been created");
                     }
                     else
                     {
-                        Log.Debug("alice already exists");
-                    }
+                        Log.Debug("Konstantin konstantin exists");
 
-                    var bob = userMgr.FindByNameAsync("bob").Result;
-                    if (bob == null)
-                    {
-                        bob = new ApplicationUser
+                        if (konstantin.DefaultAddress == null)
                         {
-                            UserName = "bob",
-                            Email = "BobSmith@email.com",
-                            EmailConfirmed = true
-                        };
-                        var result = userMgr.CreateAsync(bob, "Pass123$").Result;
+                            konstantin.DefaultAddress = new Address()
+                            {
+                                City = "Vl",
+                                Country = "Russia",
+                                PostalCode = "00-001",
+                                AddressLine1 = "Glinki 21",
+                                AddressLine2 = "34"
+                            };
+                        }
+
+                        if (konstantin.DeliveryAddress == null)
+                        {
+                            konstantin.DeliveryAddress = new Address()
+                            {
+                                City = "Vl",
+                                Country = "Russia",
+                                PostalCode = "30-001",
+                                AddressLine1 = "Pescareva 45"
+                            };
+                        }
+
+                        var result = userMgr.UpdateAsync(konstantin).Result;
                         if (!result.Succeeded)
                         {
                             throw new Exception(result.Errors.First().Description);
                         }
+                        Log.Debug("Konstantin has been updated");
+                    }
 
-                        result = userMgr.AddClaimsAsync(bob, new Claim[]{
-                            new Claim(JwtClaimTypes.Name, "Bob Smith"),
-                            new Claim(JwtClaimTypes.GivenName, "Bob"),
-                            new Claim(JwtClaimTypes.FamilyName, "Smith"),
-                            new Claim(JwtClaimTypes.WebSite, "http://bob.com"),
-                            new Claim("location", "somewhere")
-                        }).Result;
-                        if (!result.Succeeded)
-                        {
-                            throw new Exception(result.Errors.First().Description);
-                        }
-                        Log.Debug("bob created");
-                    }
-                    else
-                    {
-                        Log.Debug("bob already exists");
-                    }
                 }
             }
         }

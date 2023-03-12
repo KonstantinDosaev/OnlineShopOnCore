@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace OnlineShopOnCore.Library.Constants
 {
-    internal class ConnectionNames
+    public class ConnectionNames
     {
+        public const string UsersConnection = "UsersConnection";
+        public const string IdentityServerConnection = "IdentityConnection";
     }
 }
