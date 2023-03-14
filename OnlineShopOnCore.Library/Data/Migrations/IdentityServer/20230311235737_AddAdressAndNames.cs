@@ -24,13 +24,13 @@ namespace OnlineShopOnCore.Library.Data.Migrations.IdentityServer
             migrationBuilder.AddColumn<string>(
                 name: "FirstName",
                 table: "AspNetUsers",
-                type: "nvarchar(max)",
+                type: "nvarchar(128)",
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "LastName",
                 table: "AspNetUsers",
-                type: "nvarchar(max)",
+                type: "nvarchar(128)",
                 nullable: true);
 
             migrationBuilder.CreateTable(

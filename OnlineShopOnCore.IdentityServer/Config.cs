@@ -5,6 +5,7 @@
 using IdentityServer4.Models;
 using System.Collections.Generic;
 using IdentityServer4;
+using OnlineShopOnCore.Library.Constants;
 
 namespace OnlineShopOnCore.IdentityServer
 {
@@ -20,8 +21,8 @@ namespace OnlineShopOnCore.IdentityServer
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
             {
-                new ApiScope("OnlineShopOnCore.Api"),
-                new ApiScope("OnlineShopOnCore.Web"),
+                new ApiScope(IdConstants.ApiScope),
+                new ApiScope(IdConstants.WebScope),
             };
 
         public static IEnumerable<Client> Clients =>
@@ -39,8 +40,8 @@ namespace OnlineShopOnCore.IdentityServer
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        "OnlineShopOnCore.Web",
-                        "OnlineShopOnCore.Api"
+                        IdConstants.ApiScope,
+                        IdConstants.WebScope
                     }
                 },
 
@@ -54,7 +55,8 @@ namespace OnlineShopOnCore.IdentityServer
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        "OnlineShopOnCore.Web"
+                        IdConstants.ApiScope,
+                        IdConstants.WebScope
 
                     }
                 }
