@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace OnlineShop.IdentityServer.Data.Migrations.IdentityServer.ConfigurationDb
+namespace OnlineShopOnCore.IdentityServer.Data.Migrations.IdentityServer.ConfigurationDb
 {
     public partial class InitialIdentityServerConfigurationDbMigration : Migration
     {

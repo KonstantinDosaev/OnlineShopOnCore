@@ -9,11 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShopOnCore.IdentitySe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{72FA56C9-7B4F-499C-BDEC-38CF299C0DF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShopOnCore.UserManagementService", "OnlineShopOnCore.UserManagementService\OnlineShopOnCore.UserManagementService.csproj", "{ACEE9719-0867-483C-B869-3F114F47169F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShopOnCore.UserManagementService", "OnlineShopOnCore.UserManagementService\OnlineShopOnCore.UserManagementService.csproj", "{ACEE9719-0867-483C-B869-3F114F47169F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "library", "library", "{423ECC56-CA6B-41E1-8537-1C1E5337F826}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShopOnCore.Library", "OnlineShopOnCore.Library\OnlineShopOnCore.Library.csproj", "{9464B33E-82A9-4312-B587-587DEF1F4895}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShopOnCore.Library", "OnlineShopOnCore.Library\OnlineShopOnCore.Library.csproj", "{9464B33E-82A9-4312-B587-587DEF1F4895}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShopOnCore.ConsoleTestApp", "OnlineShopOnCore.ConsoleTestApp\OnlineShopOnCore.ConsoleTestApp.csproj", "{B0ECCEDD-0748-4415-8CC1-05BFFFBC316A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9464B33E-82A9-4312-B587-587DEF1F4895}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9464B33E-82A9-4312-B587-587DEF1F4895}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9464B33E-82A9-4312-B587-587DEF1F4895}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0ECCEDD-0748-4415-8CC1-05BFFFBC316A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0ECCEDD-0748-4415-8CC1-05BFFFBC316A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0ECCEDD-0748-4415-8CC1-05BFFFBC316A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0ECCEDD-0748-4415-8CC1-05BFFFBC316A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +47,7 @@ Global
 		{591A251B-1029-485B-B5B1-C61C0AE6C7C7} = {60918484-6817-46E6-916C-4E80F3E7EB05}
 		{ACEE9719-0867-483C-B869-3F114F47169F} = {72FA56C9-7B4F-499C-BDEC-38CF299C0DF3}
 		{9464B33E-82A9-4312-B587-587DEF1F4895} = {423ECC56-CA6B-41E1-8537-1C1E5337F826}
+		{B0ECCEDD-0748-4415-8CC1-05BFFFBC316A} = {60918484-6817-46E6-916C-4E80F3E7EB05}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5914F358-C124-4322-BD10-5671FFE9D4B2}

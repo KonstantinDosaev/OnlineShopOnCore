@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace OnlineShop.IdentityServer.Data.Migrations.IdentityServer.PersistedGrantDb
+namespace OnlineShopOnCore.IdentityServer.Data.Migrations.IdentityServer.PersistedGrantDb
 {
     public partial class InitialIdentityServerPersistedGrantDbMigration : Migration
     {

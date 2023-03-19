@@ -1,12 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using OnlineShop.Library.Constants;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using OnlineShopOnCore.Library.Constants;
 
-namespace OnlineShop.UserManagementService.Controllers
+namespace OnlineShopOnCore.UserManagementService.Controllers
 {
     [ApiController]
     [Route("[controller]")]

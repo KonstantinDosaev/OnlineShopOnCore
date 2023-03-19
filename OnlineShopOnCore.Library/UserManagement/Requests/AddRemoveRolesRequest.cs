@@ -1,4 +1,4 @@
-﻿namespace OnlineShop.Library.UserManagementService.Requests
+﻿namespace OnlineShopOnCore.Library.UserManagement.Requests
 {
     public class AddRemoveRolesRequest
     {

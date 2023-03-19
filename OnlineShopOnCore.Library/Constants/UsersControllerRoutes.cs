@@ -1,4 +1,4 @@
-﻿namespace OnlineShop.Library.Constants
+﻿namespace OnlineShopOnCore.Library.Constants
 {
     public static class UsersControllerRoutes
     {
