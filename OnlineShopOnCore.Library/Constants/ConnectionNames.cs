@@ -10,5 +10,6 @@ namespace OnlineShopOnCore.Library.Constants
     {
         public const string UsersConnection = "UsersConnection";
         public const string IdentityServerConnection = "IdentityConnection";
+        public const string OrdersConnection = "OrdersConnection";
     }
 }

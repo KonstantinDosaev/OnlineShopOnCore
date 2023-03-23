@@ -1,4 +1,7 @@
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
+using OnlineShopOnCore.Library.Constants;
+using OnlineShopOnCore.Library.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +11,9 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "ArticlesService", Version = "v1" });
 });
+
+builder.Services.AddDbContext<OrdersDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString(ConnectionNames.OrdersConnection)));
 
 //builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 //    .AddEntityFrameworkStores<UsersDbContext>()
