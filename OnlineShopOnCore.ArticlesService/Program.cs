@@ -1,5 +1,8 @@
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
+using OnlineShopOnCore.Library.ArticleService.Models;
+using OnlineShopOnCore.Library.ArticleService.Repo;
+using OnlineShopOnCore.Library.Common.Interfaces;
 using OnlineShopOnCore.Library.Constants;
 using OnlineShopOnCore.Library.Data;
 
@@ -14,6 +17,9 @@ builder.Services.AddSwaggerGen(c =>
 
 builder.Services.AddDbContext<OrdersDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString(ConnectionNames.OrdersConnection)));
+
+builder.Services.AddTransient<IRepo<Article>, ArticlesRepo>();
+builder.Services.AddTransient<IRepo<PriceList>, PriceListRepo>();
 
 //builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 //    .AddEntityFrameworkStores<UsersDbContext>()

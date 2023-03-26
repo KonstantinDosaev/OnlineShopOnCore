@@ -24,7 +24,8 @@ namespace OnlineShopOnCore.Library.ArticleService.Models
         [Column(TypeName = "numeric(12,4)")]
         public decimal Price { get; set; }
 
-        [Required] public string Name { get; set; } = PriceListNames.DEFAULT;
+        [Required] 
+        public string Name { get; set; } = PriceListNames.DEFAULT;
 
         [Column(TypeName = "datetime2")]
         [Required]
