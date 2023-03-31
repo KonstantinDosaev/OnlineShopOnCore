@@ -19,7 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Clients\" />
     <Folder Include="Data\Migrations\Orders\" />
   </ItemGroup>
 

@@ -52,6 +52,6 @@ namespace OnlineShopOnCore.Library.ArticleService.Models
         public Guid OrderId { get; set; }
 
         [JsonIgnore]
-        public virtual Order Order { get; set; }
+        public virtual Order? Order { get; set; }
     }
 }

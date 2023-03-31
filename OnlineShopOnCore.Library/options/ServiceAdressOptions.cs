@@ -11,5 +11,7 @@ namespace OnlineShopOnCore.Library.options
         public const string SectionName = nameof(ServiceAdressOptions);
         public string? IdentityServer { get; set; }
         public string? UserManagementService { get; set; }
+        public string OrderService { get; set; }
+        public string ArticleService { get; set; }
     }
 }
