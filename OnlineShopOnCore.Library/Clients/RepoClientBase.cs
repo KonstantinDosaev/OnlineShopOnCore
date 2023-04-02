@@ -17,7 +17,9 @@ namespace OnlineShopOnCore.Library.Clients
     {
         public RepoClientBase(HttpClient client, IOptions<ServiceAdressOptions> options)
         {
-
+            HttpClient = client;
+            InitializeClient(options);
+            SetControllerName();
         }
 
         protected abstract void InitializeClient(IOptions<ServiceAdressOptions> options);

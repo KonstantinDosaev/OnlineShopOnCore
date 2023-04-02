@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Newtonsoft.Json;
+//using Newtonsoft.Json;
 using OnlineShopOnCore.Library.Common.Interfaces;
 using OnlineShopOnCore.Library.OrdersService.Models;
 
@@ -20,10 +20,10 @@ namespace OnlineShopOnCore.Library.ArticleService.Models
         public Guid Id { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [Required]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         [Required]
         [Column(TypeName = "numeric(12,4)")]
@@ -38,7 +38,7 @@ namespace OnlineShopOnCore.Library.ArticleService.Models
         public decimal Total => Price * Quantity;
 
         [Required]
-        public string PriceListName { get; set; }
+        public string? PriceListName { get; set; }
 
         [Column(TypeName = "datetime2")]
         [Required]

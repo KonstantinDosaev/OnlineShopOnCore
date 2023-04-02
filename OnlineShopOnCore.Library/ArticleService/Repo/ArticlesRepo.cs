@@ -16,6 +16,6 @@ namespace OnlineShopOnCore.Library.ArticleService.Repo
             => await Table.Include(nameof(Article.PriceList)).ToListAsync();
 
         public override async Task<Article> GetOneAsync(Guid id)
-            => await Task.Run(() => Table.Include(nameof(Article.PriceList)).FirstOrDefault(entity => entity.Id == id));
+            => (await Task.Run(() => Table.Include(nameof(Article.PriceList)).FirstOrDefault(entity => entity.Id == id)))!;
     }
 }

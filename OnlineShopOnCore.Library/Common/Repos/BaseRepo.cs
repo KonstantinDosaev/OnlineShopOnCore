@@ -53,8 +53,7 @@ namespace OnlineShopOnCore.Library.Common.Repos
 
         public virtual async Task<IEnumerable<T>> GetAllAsync() => await Table.ToListAsync();
 
-        public virtual async Task<T> GetOneAsync(Guid id)
-            => await Task.Run(() => Table.FirstOrDefault(entity => entity.Id == id));
+        public virtual async Task<T> GetOneAsync(Guid id) => await Task.Run(() => Table.FirstOrDefault(entity => entity.Id == id));
 
         public async Task<int> SaveAsync(T entity)
         {
